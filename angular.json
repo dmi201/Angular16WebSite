@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/buildtechent",
+            "outputPath": "dist/buildtechent/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -43,7 +43,8 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "optimization": true
             },
             "development": {
               "buildOptimizer": false,
@@ -61,6 +62,7 @@
           "configurations": {
             "production": {
               "browserTarget": "buildtechent:build:production"
+              
             },
             "development": {
               "browserTarget": "buildtechent:build:development"
@@ -91,6 +93,63 @@
             ],
             "scripts": []
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/buildtechent/server",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media",
+              "optimization": true
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false,
+              "vendorChunk": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "buildtechent:build:development",
+              "serverTarget": "buildtechent:server:development"
+            },
+            "production": {
+              "browserTarget": "buildtechent:build:production",
+              "serverTarget": "buildtechent:server:production",
+              "optimization": true
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "buildtechent:build:production",
+              "serverTarget": "buildtechent:server:production",
+              "optimization": true
+            },
+            "development": {
+              "browserTarget": "buildtechent:build:development",
+              "serverTarget": "buildtechent:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

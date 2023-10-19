@@ -1,0 +1,42 @@
+<div class="message-box-container">
+  <div class="message-box">
+    <h1>
+      Bine ați venit pe pagina noastră! Mai jos veți găsi câteva articole
+      interesante din domeniul construcțiilor.
+    </h1>
+  </div>
+</div>
+
+<div class="article-list">
+  <div *ngFor="let article of articles" class="article">
+    <div
+      [style.backgroundImage]="'url(' + article.image800wWebp + ')'"
+      [routerLink]="['/articole', article.slug]"
+    >
+      <h2>{{ article.title }}</h2>
+      <p>{{ article.summary }}</p>
+    </div>
+
+    <a [routerLink]="['/articole', article.slug]">Citește mai mult...</a>
+  </div>
+</div>
+
+<div class="message-box-container">
+  <div class="message-box">
+    <h4>Mai jos gasiti serviciile noastre!!!</h4>
+  </div>
+</div>
+
+<div class="article-list">
+  <div *ngFor="let service of services" class="article">
+    <div
+      [style.backgroundImage]="'url(' + service.image800wWebp + ')'"
+      [routerLink]="['/servicii', service.slug]"
+    >
+      <h2>{{ service.title }}</h2>
+      <p>{{ service.summary }}</p>
+    </div>
+
+    <a [routerLink]="['/servicii', service.slug]">Citește mai mult...</a>
+  </div>
+</div>

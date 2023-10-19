@@ -1,0 +1,84 @@
+<div class="message-box-container">
+  <div class="message-box">
+    <h1>
+      Cum puteți să ne contactați? Fie prin telefon, fie prin email, cum vă este
+      mai simplu. Suntem receptivi la dorințele dumneavoastră!
+    </h1>
+  </div>
+</div>
+
+<section>
+  <div class="contact-container">
+    <h3>Detalii de Contact</h3>
+    <address>
+      <p>
+        Nume Firmă: <span>{{ companyData.CompanyName }}</span>
+      </p>
+      <p>
+        Adresă: <span>{{ companyData.CompanyAddress }}</span>
+      </p>
+    </address>
+    <p>
+      Email:
+      <span>
+        <a
+          href="mailto:{{ companyData.CompanyEmail }}"
+          title="Trimiteți-ne un email"
+          >{{ companyData.CompanyEmail }}</a
+        ></span
+      >
+    </p>
+    <p>
+      Telefon:
+      <span>
+        <a
+          href="tel:{{ companyData.CompanyPhoneNumber }}"
+          title="Apelați-ne la {{ companyData.CompanyPhoneNumber }}"
+          >{{ companyData.CompanyPhoneNumber }}</a
+        >
+      </span>
+    </p>
+    <p>
+      WhatsApp:
+      <span>
+        <a
+          [href]="'https://wa.me/' + phoneNumber + '?text=' + wppMessage"
+          class="cta"
+          title="WhatsApp"
+          target="_blank"
+        >
+          <button>WhatsApp</button>
+        </a>
+      </span>
+    </p>
+
+    <p>
+      Persoană de Contact:
+      <span> {{ companyData.CompanyOwner }}</span>
+    </p>
+    <p>
+      Mulțumim că ați apelat la serviciile
+      <span> {{ companyData.CompanyName }}</span
+      >!
+    </p>
+    <p>Ultima actualizare: {{ companyData.LastUpdate }}</p>
+  </div>
+</section>
+
+<div class="message-box-container">
+  <div class="message-box">
+    <h4>Locația pe hartă!</h4>
+  </div>
+</div>
+
+<section>
+  <div class="contact-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2850.1935676103913!2d26.111972291405888!3d44.40867352867432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1fef92713a169%3A0x2535d725a3b4bffd!2sBulevardul%20Tineretului%2053%2C%20Bucure%C8%99ti!5e0!3m2!1sro!2sro!4v1696501686711!5m2!1sro!2sro"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Locația noastră pe Google Maps"
+    ></iframe>
+  </div>
+</section>

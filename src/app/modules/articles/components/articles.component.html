@@ -1,0 +1,53 @@
+<div *ngIf="!article.title" class="message-box-container">
+  <div class="message-box">
+    <h1>
+      Te afli pe pagina cu articole din universul constructiilor. Spor la citit!
+    </h1>
+  </div>
+</div>
+
+<div *ngIf="!article.title" class="article-list">
+  <div *ngFor="let article of articles" class="article">
+    <div
+      [style.backgroundImage]="'url(' + article.image800wWebp + ')'"
+      [attr.aria-label]="article.title"
+      [routerLink]="['/articole', article.slug]"
+    >
+      <h2>{{ article.title }}</h2>
+      <p>{{ article.summary }}</p>
+    </div>
+
+    <a [routerLink]="['/articole', article.slug]">Citește mai mult...</a>
+  </div>
+</div>
+
+<div *ngIf="article.title" class="message-box-container">
+  <div class="message-box">
+    <h1>{{ article.title }}</h1>
+  </div>
+</div>
+
+<article *ngIf="article.title" class="article-container">
+  <header>
+    <div
+      [style.backgroundImage]="'url(' + article.image800wWebp + ')'"
+      [attr.aria-label]="article.title"
+    >
+      <h2>{{ article.summary }}</h2>
+      <p>Categorie: {{ article.category }}</p>
+      <p>Timp de citire estimat: {{ article.estimatedReadTime }}</p>
+    </div>
+  </header>
+  <ng-container *ngFor="let section of article.sections">
+    <section class="article-section" id="{{ section.slug }}">
+      <h3>{{ section.title }}</h3>
+      <p>{{ section.content }}</p>
+      <div *ngFor="let image of section.images400wWebp">
+        <img [src]="image" [alt]="section.title + ' image'" />
+      </div>
+    </section>
+  </ng-container>
+  <footer>
+    <p>Publicat în data de: {{ article.datePublished }}</p>
+  </footer>
+</article>

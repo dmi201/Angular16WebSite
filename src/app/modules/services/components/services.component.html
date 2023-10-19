@@ -1,0 +1,38 @@
+<div *ngIf="!service.title" class="message-box-container">
+  <div class="message-box">
+    <h1>Mai jos găsiți serviciile noastre!!!</h1>
+  </div>
+</div>
+
+<div *ngIf="!service.title" class="article-list">
+  <div *ngFor="let service of services" class="article">
+    <div
+      [style.backgroundImage]="'url(' + service.image800wWebp + ')'"
+      [routerLink]="['/servicii', service.slug]"
+    >
+      <h2>{{ service.title }}</h2>
+      <p>{{ service.summary }}</p>
+    </div>
+
+    <a [routerLink]="['/servicii', service.slug]">Citește mai mult...</a>
+  </div>
+</div>
+
+<div *ngIf="service.title" class="message-box-container">
+  <div class="message-box">
+    <h1>{{ service.title }}</h1>
+  </div>
+</div>
+
+<article *ngIf="service.title" class="article-container">
+  <header>
+    <div [style.backgroundImage]="'url(' + service.image800wWebp + ')'">
+      <h2>{{ service.summary }}</h2>
+      <p>Categorie: {{ service.category }}</p>
+    </div>
+  </header>
+  <section [innerHTML]="service.content">
+    <p>Categorie: {{ service.content }}</p>
+  </section>
+  <footer></footer>
+</article>

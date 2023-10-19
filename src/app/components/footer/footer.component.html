@@ -1,0 +1,22 @@
+<footer>
+  <div class="footer-container">
+    <address>
+      <p>{{ companyData.CompanyName }} - {{ companyData.CompanyAddress }}</p>
+    </address>
+    <p>
+      <a
+        href="mailto:{{ companyData.CompanyEmail }}"
+        title="Trimiteți-ne un email"
+        >{{ companyData.CompanyEmail }}</a
+      >
+      -
+      <a
+        href="tel:{{ companyData.CompanyPhoneNumber }}"
+        title="Pagina de contact"
+        >{{ companyData.CompanyPhoneNumber }}</a
+      >
+    </p>
+
+    <p>Mulțumim că ați apelat la serviciile {{ companyData.CompanyName }}!</p>
+  </div>
+</footer>
