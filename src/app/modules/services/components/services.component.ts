@@ -3,6 +3,7 @@ import { Service } from '../../home/components/home.component';
 import { ActivatedRoute } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
 import { ArticleService } from 'src/app/services/article.service';
+import { PageSlugs } from 'src/app/enums/page-slugs';
 
 @Component({
   selector: 'app-services',
@@ -13,6 +14,7 @@ export class ServicesComponent {
   public service: Service = {} as Service;
   public services: Service[] = [];
   public mediaValue800px = '(max-width: 50rem)';
+  public pageSlugs: typeof PageSlugs = PageSlugs;
 
   constructor(
     private route: ActivatedRoute,

@@ -11,13 +11,13 @@
     <div
       [style.backgroundImage]="'url(' + article.image800wWebp + ')'"
       [attr.aria-label]="article.title"
-      [routerLink]="['/articole', article.slug]"
+      [routerLink]="[pageSlugs.ARTICLES, article.slug]"
     >
       <h2>{{ article.title }}</h2>
       <p>{{ article.summary }}</p>
     </div>
 
-    <a [routerLink]="['/articole', article.slug]">Citește mai mult...</a>
+    <a [routerLink]="[pageSlugs.ARTICLES, article.slug]">Citește mai mult...</a>
   </div>
 </div>
 

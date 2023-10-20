@@ -11,13 +11,13 @@
   <div *ngFor="let article of articles" class="article">
     <div
       [style.backgroundImage]="'url(' + article.image800wWebp + ')'"
-      [routerLink]="['/articole', article.slug]"
+      [routerLink]="[pageSlugs.ARTICLES, article.slug]"
     >
       <h2>{{ article.title }}</h2>
       <p>{{ article.summary }}</p>
     </div>
 
-    <a [routerLink]="['/articole', article.slug]">Citește mai mult...</a>
+    <a [routerLink]="[pageSlugs.ARTICLES, article.slug]">Citește mai mult...</a>
   </div>
 </div>
 
@@ -31,12 +31,12 @@
   <div *ngFor="let service of services" class="article">
     <div
       [style.backgroundImage]="'url(' + service.image800wWebp + ')'"
-      [routerLink]="['/servicii', service.slug]"
+      [routerLink]="[pageSlugs.SERVICES, service.slug]"
     >
       <h2>{{ service.title }}</h2>
       <p>{{ service.summary }}</p>
     </div>
 
-    <a [routerLink]="['/servicii', service.slug]">Citește mai mult...</a>
+    <a [routerLink]="[pageSlugs.SERVICES, service.slug]">Citește mai mult...</a>
   </div>
 </div>

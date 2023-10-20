@@ -22,6 +22,7 @@
   .article-container,
   .contact-container,
   .footer-container,
+  .breadcrumb-container,
   .message-box-container{
     max-width: 50rem;
     margin: auto;
@@ -187,7 +188,11 @@ a:hover{
     border-radius: 0.5rem;
     padding: 1rem;
     background-color: var(--accent-color);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .message-box h1 {
+    margin-bottom: 0;
   }
 
   /* .message-box h3{
@@ -244,6 +249,36 @@ a:hover{
     transition: var(--transition);
   }
 
+
+  .breadcrumb-container {
+    display: flex; /* Acesta va afișa toate breadcrumb-urile orizontal */
+    justify-content: center; /* Acesta le va centra pe orizontal */
+    align-items: center; /* Acesta le va centra pe vertical */
+    background-color: var(--text-color1);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+  }
+
+
+
+  .breadcrumb-container p, 
+  .breadcrumb-container a
+  {
+    margin-bottom: 0;
+    padding: 0.5rem;
+    color: var(--primary-color);
+  }
+
+  .breadcrumb-container .breadcrumb-item a:hover {
+    color: var(--accent-color);
+    transition: var(--transition);
+}
+
+.breadcrumb-container .last-breadcrumb:hover {
+    color: inherit;  /* sau orice altă culoare pe care dorești să o aibă atunci când este hover, pentru a anula efectul de hover */
+    transition: none;  /* opțional, pentru a elimina tranziția atunci când este hover pe ultimul breadcrumb */
+}
 
   .menuToggle
   {

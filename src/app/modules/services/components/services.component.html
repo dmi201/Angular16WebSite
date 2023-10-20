@@ -8,13 +8,13 @@
   <div *ngFor="let service of services" class="article">
     <div
       [style.backgroundImage]="'url(' + service.image800wWebp + ')'"
-      [routerLink]="['/servicii', service.slug]"
+      [routerLink]="[pageSlugs.SERVICES, service.slug]"
     >
       <h2>{{ service.title }}</h2>
       <p>{{ service.summary }}</p>
     </div>
 
-    <a [routerLink]="['/servicii', service.slug]">Citește mai mult...</a>
+    <a [routerLink]="[pageSlugs.SERVICES, service.slug]">Citește mai mult...</a>
   </div>
 </div>
 

@@ -6,9 +6,15 @@ import { AppComponent } from './app.component';
 
 import { TopbarComponent } from './components/topbar/topbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
 
 @NgModule({
-  declarations: [AppComponent, TopbarComponent, FooterComponent],
+  declarations: [
+    AppComponent,
+    TopbarComponent,
+    BreadcrumbsComponent,
+    FooterComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],

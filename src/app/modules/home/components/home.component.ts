@@ -2,6 +2,7 @@ import { DOCUMENT } from '@angular/common';
 import { Component, Inject, Renderer2 } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { CompanyData } from 'src/app/enums/company-data';
+import { PageSlugs } from 'src/app/enums/page-slugs';
 import { ArticleService } from 'src/app/services/article.service';
 
 export interface Section {
@@ -51,6 +52,7 @@ export class HomeComponent {
   public articles: Article[] = [];
   public services: Service[] = [];
   public mediaValue800px = '(max-width: 50rem)';
+  public pageSlugs: typeof PageSlugs = PageSlugs;
 
   constructor(
     private titleService: Title,

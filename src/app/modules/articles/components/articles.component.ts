@@ -4,6 +4,7 @@ import { ArticleService } from 'src/app/services/article.service';
 import { Article } from '../../home/components/home.component';
 import { Meta, Title } from '@angular/platform-browser';
 import { CompanyData } from 'src/app/enums/company-data';
+import { PageSlugs } from 'src/app/enums/page-slugs';
 
 @Component({
   selector: 'app-articles',
@@ -15,6 +16,7 @@ export class ArticlesComponent {
   public articles: Article[] = [];
   public mediaValue800px = '(max-width: 50rem)';
   public companyData: typeof CompanyData = CompanyData;
+  public pageSlugs: typeof PageSlugs = PageSlugs;
 
   constructor(
     private route: ActivatedRoute,
@@ -23,29 +25,6 @@ export class ArticlesComponent {
     private articleService: ArticleService
   ) {}
 
-  //   ngOnInit() {
-  //     const slug = this.route.snapshot.paramMap.get('slug');
-
-  //     if (slug !== null) {
-  //       this.article = this.articleService.getArticleBySlug(slug);
-  //     }
-
-  //     let content = 'Articole Importante din Construcții';
-  //     let title = `Articole Importante din Construcții`;
-
-  //     if (this.article.sections.length > 0) {
-  //       content = this.article.summary;
-  //       title = this.article.title;
-  //     }
-
-  //     this.titleService.setTitle(title);
-  //     this.metaService.updateTag({
-  //       name: 'description',
-  //       content: content,
-  //     });
-  //     this.articles = this.articleService.getArticles();
-  //   }
-  // }
   ngOnInit() {
     const slug = this.route.snapshot.paramMap.get('slug');
 
