@@ -8,7 +8,7 @@
     --text-color2: #002853;
     --text-color3: #003e81;
     --text-color4: #324357;
-    --wpp-color: #25D366;
+    --wpp-color: #32ac5f;
     --wpp-color-hover: #1ebea5;
     --transition: all 0.3s ease 0s;;
 
@@ -18,26 +18,32 @@
     font-family: 'Helvetica', sans-serif;
   }
 
+  .home-container,
   .article-list, 
   .article-container,
   .contact-container,
   .footer-container,
   .breadcrumb-container,
-  .message-box-container{
+  .message-box-container,
+  .home-container-2,
+  .faq-container,
+  .cookie-container,
+  .about-us-container
+  {
     max-width: 50rem;
     margin: auto;
+    margin-bottom: 0.5rem;
     /* position: absolute; */
     /* top: 15rem; */
   }
   
-
 
   .contact-container{
     text-align: center;
   }
   
 
-h1, h4{
+h1, .message-box p{
     font-size: 1.2rem;
     line-height: 1.695em;
     color: var(--primary-color);
@@ -49,8 +55,7 @@ h1, h4{
 h2{
   font-size: 1.8rem;
   line-height: 1.425em;
-
-  color: var(--primary-color);
+  color: var(--text-color2);
   margin: 0;
   margin-bottom: 0.85em;
 }
@@ -62,6 +67,12 @@ h3{
   margin: 0;
   margin-bottom: 0.75em;
 }
+
+.article-list h3{
+  color: var(--primary-color);
+}
+
+
 
 /* h1{
   font-size: 2.2rem;
@@ -126,6 +137,11 @@ p, a, li{
   text-align: center;
 }
 
+.article-container footer p{
+  font-style: italic;
+  text-align: center;
+}
+
 
 a:hover{
   color: var(--accent-color);
@@ -141,12 +157,20 @@ a:hover{
   margin-top: auto;
 }
 
- /* .topbar-container {
-    position: sticky;
-    top: 0px;
-    z-index: 2;
-    background-color: var(--secondary-color1);
-  } */
+.section-img,
+.about-us-container  {
+  text-align: center;
+}
+
+.about-us-container p{
+text-align: left;
+}
+
+.section-img img,
+.about-us-container img{
+  max-width: 100%;
+  margin-bottom: 0.5rem;
+}
 
 
   .topbar-container{
@@ -191,7 +215,7 @@ a:hover{
     margin-bottom: 1.5rem;
   }
 
-  .message-box h1 {
+  .message-box h1, .message-box p {
     margin-bottom: 0;
   }
 
@@ -231,7 +255,7 @@ a:hover{
     background-color: var(--wpp-color);
     border: none;
     border-radius: 0.5rem;
-    color: var(--primary-color);
+    color: white;
     margin-bottom: 1rem;
     cursor: pointer;
   }
@@ -258,6 +282,9 @@ a:hover{
     color: var(--primary-color);
     margin-bottom: 1rem;
     border-radius: 0.5rem;
+    overflow-x:auto;
+    white-space: nowrap;
+
   }
 
 
@@ -265,9 +292,12 @@ a:hover{
   .breadcrumb-container p, 
   .breadcrumb-container a
   {
+    font-size: 0.8rem;
+    /* font-weight: bold; */
     margin-bottom: 0;
     padding: 0.5rem;
     color: var(--primary-color);
+    
   }
 
   .breadcrumb-container .breadcrumb-item a:hover {
@@ -275,15 +305,50 @@ a:hover{
     transition: var(--transition);
 }
 
-.breadcrumb-container .last-breadcrumb:hover {
+  .breadcrumb-container .last-breadcrumb:hover {
     color: inherit;  /* sau orice altă culoare pe care dorești să o aibă atunci când este hover, pentru a anula efectul de hover */
     transition: none;  /* opțional, pentru a elimina tranziția atunci când este hover pe ultimul breadcrumb */
-}
+  }
+
+
+  .home-container {
+    max-width: 50rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem; /* Ajustează în funcție de necesități */
+  }
+
+  .home-container h2,
+  .home-container h3{
+    text-align: center;
+  }
+
+  .home-container >img {
+    border-radius: 0.5rem;
+    display: block; /* asigură-te că imaginea este un block element dacă dorești să aplici margin */
+    width: 100%;
+    height: auto;
+  }
+
+  .home-container-2 h3{
+    text-align: center;
+  }
+
+  .faq-container {
+    /* border: 1px solid #ccc; */
+    border-radius: 0.5rem;
+  }
+
+  .about-us-container h2{
+    text-align: center;
+  }
+  
+
 
   .menuToggle
   {
     display: block;
-    position: relative;
+    position: absolute;
     top: 3rem;
     left: 3rem;
     
@@ -419,8 +484,53 @@ a:hover{
   display: none;
 }
 
+
+
+.cookie-container {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem 0;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 3;
+  background-color: #ffffff; /* or any color you prefer */
+  text-align: center;
+  border-radius: 0.5rem;
+}
+
+.cookie-container button{
+  background-color: var(--accent-color);
+}
+
+.cookie-container button:hover{
+  background-color: var(--text-color3);
+}
+
 /* Afișează meniul desktop și ascunde meniul mobil pentru ecrane mari */
+@media screen and (max-width: 768px) {
+
+
+  .breadcrumb-container {
+    justify-content: left; /* Acesta le va centra pe orizontal */
+    margin-top: 5rem;
+  }
+
+  .home-container{
+    max-width: 50rem;
+    display: grid;
+    grid-template-columns:  1fr;
+  }
+
+}
+
 @media screen and (min-width: 768px) {
+  .home-container >img {
+    width: 100vw;
+    max-width: 50rem;
+  }
+
   .mobile-nav {
     display: none;
   }
@@ -450,6 +560,8 @@ a:hover{
   .desktop-nav li a:hover{
     color: var(--accent-color);
   }
+
+
 }
 
 

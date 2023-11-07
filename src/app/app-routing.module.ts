@@ -40,6 +40,23 @@ const routes: Routes = [
       ),
   },
   {
+    path: PageSlugs.ABOUT_US.slice(1),
+    loadChildren: () =>
+      import('./modules/about/about.module').then((m) => m.AboutModule),
+  },
+  {
+    path: PageSlugs.COLLABORATION.slice(1),
+    loadChildren: () =>
+      import('./modules/collaboration/collaboration.module').then(
+        (m) => m.CollaborationModule
+      ),
+  },
+  // {
+  //   path: PageSlugs.HIRING.slice(1),
+  //   loadChildren: () =>
+  //     import('./modules/hiring/hiring.module').then((m) => m.HiringModule),
+  // },
+  {
     path: PageSlugs.CONTACT.slice(1),
     loadChildren: () =>
       import('./modules/contact/contact.module').then((m) => m.ContactModule),

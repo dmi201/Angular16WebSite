@@ -1,7 +1,8 @@
 <div *ngIf="!article.title" class="message-box-container">
   <div class="message-box">
     <h1>
-      Te afli pe pagina cu articole din universul constructiilor. Spor la citit!
+      Te afli pe pagina cu articole din Universul Constructiilor. <br />
+      Spor la citit!
     </h1>
   </div>
 </div>
@@ -41,10 +42,15 @@
   <ng-container *ngFor="let section of article.sections">
     <section class="article-section" id="{{ section.slug }}">
       <h3>{{ section.title }}</h3>
-      <p>{{ section.content }}</p>
-      <div *ngFor="let image of section.images400wWebp">
-        <img [src]="image" [alt]="section.title + ' image'" />
+      <div *ngFor="let image of section.images400wWebp" class="section-img">
+        <img
+          [src]="image"
+          [alt]="section.title + ' image'"
+          width="400px"
+          height="400px"
+        />
       </div>
+      <p [innerHTML]="section.content"></p>
     </section>
   </ng-container>
   <footer>

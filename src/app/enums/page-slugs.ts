@@ -1,8 +1,8 @@
 export enum PageSlugs {
   ARTICLES = '/articole',
   SERVICES = '/servicii',
-  ABOUT_US = '/despre',
+  ABOUT_US = '/despre-noi',
   COLLABORATION = '/colaborare',
-  HIRING = '/angajare',
+  // HIRING = '/angajare',
   CONTACT = '/contact',
 }

@@ -40,6 +40,7 @@ export interface Service {
   priceCurrency: string;
   areaServed: string[];
   serviceAudience: string[];
+  keywords: string;
 }
 
 @Component({
@@ -49,6 +50,8 @@ export interface Service {
 })
 export class HomeComponent {
   public companyData: typeof CompanyData = CompanyData;
+  public phoneNumber = CompanyData.WhatsAppPhoneNumber;
+  public wppMessage = encodeURIComponent(CompanyData.WhatsAppMessage);
   public articles: Article[] = [];
   public services: Service[] = [];
   public mediaValue800px = '(max-width: 50rem)';
@@ -56,8 +59,6 @@ export class HomeComponent {
 
   constructor(
     private titleService: Title,
-    private renderer: Renderer2,
-    @Inject(DOCUMENT) private document: Document,
     private metaService: Meta,
     private articleService: ArticleService
   ) {}
@@ -67,12 +68,6 @@ export class HomeComponent {
       `Pagina principală - ${this.companyData.CompanyName}`
     );
     this.metaService.addTags([
-      //cuvinte cheie pentru motorul de cautare
-      {
-        name: 'keywords',
-        content:
-          'proiectare constructii civile, proiectare constructii industriale, proiectare turnuri telecomunicatii, articole constructii, proiectant București, arhitect, proiecte case, structurist, inginer structursit, DTAC, PTh, DE, DTAD, DTOE, SF, DALI, expertiza tehnica, MLPAT, verificator proiecte, expertiza tehnica judiciara, avize constructii',
-      },
       {
         name: 'description',
         content: 'Aceasta este pagina principală a companiei noastre.',
@@ -80,29 +75,5 @@ export class HomeComponent {
     ]);
     this.articles = this.articleService.getArticles();
     this.services = this.articleService.getServices();
-
-    this.addSchemaForArticlesAndServices();
-  }
-
-  addSchemaForArticlesAndServices(): void {
-    const script = this.renderer.createElement('script');
-    this.renderer.setAttribute(script, 'type', 'application/ld+json');
-
-    const schemasForArticles = this.articles.map((article) =>
-      this.articleService.returnSchemaFromArticle(article)
-    );
-    const schemasForServices = this.services.map((service) =>
-      this.articleService.returnSchemaFromService(service)
-    );
-
-    const text = this.renderer.createText(
-      JSON.stringify({
-        '@context': 'https://schema.org',
-        '@graph': [...schemasForArticles, ...schemasForServices],
-      })
-    );
-
-    this.renderer.appendChild(script, text);
-    this.renderer.appendChild(this.document.head, script);
   }
 }

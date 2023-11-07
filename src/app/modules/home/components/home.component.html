@@ -1,42 +1,230 @@
 <div class="message-box-container">
   <div class="message-box">
     <h1>
-      Bine ați venit pe pagina noastră! Mai jos veți găsi câteva articole
-      interesante din domeniul construcțiilor.
+      Visul Tău este Proiectul Nostru! <br />
+      Să Începem!
     </h1>
   </div>
 </div>
 
-<div class="article-list">
-  <div *ngFor="let article of articles" class="article">
-    <div
-      [style.backgroundImage]="'url(' + article.image800wWebp + ')'"
-      [routerLink]="[pageSlugs.ARTICLES, article.slug]"
-    >
-      <h2>{{ article.title }}</h2>
-      <p>{{ article.summary }}</p>
-    </div>
+<div class="home-container">
+  <img
+    src="../../../../assets/home-800px.webp"
+    alt="Un proiectant fericit"
+    width="800px"
+    height="533px"
+  />
+</div>
 
-    <a [routerLink]="[pageSlugs.ARTICLES, article.slug]">Citește mai mult...</a>
+<div class="home-container">
+  <div>
+    <h2>Serviciile Noastre</h2>
+    <p>
+      Build Tech Enterprise nu se limitează la proiectarea tradițională.
+      Extindem posibilitățile prin rețeaua noastră extinsă de specialiști și
+      experți acreditați. Fiecare vis este unic, iar noi suntem dedicați să îl
+      transformăm în realitate, asigurându-ne că ai acces la profesioniștii
+      potriviți care să îți aducă viziunea la viață.
+    </p>
+  </div>
+  <div>
+    <ul>
+      <li>
+        Proiectare de Arhitectură, Rezistență și Instalații pentru Construcții
+        Noi
+      </li>
+      <li>Verificare Tehnică a Proiectelor de Specialitate</li>
+      <li>Asistență Tehnică pe Perioada Execuției Lucrărilor</li>
+      <li>
+        Documentații pentru Obținerea Avizelor și Acordurilor Solicitate prin
+        Certificatul de Urbanism
+      </li>
+      <li>Consultanță Specializată privind Achiziția de Terenuri și Clădiri</li>
+      <li>Consultanță legată de Proiecte</li>
+    </ul>
   </div>
 </div>
 
 <div class="message-box-container">
   <div class="message-box">
-    <h4>Mai jos gasiti serviciile noastre!!!</h4>
+    <p>
+      Doar atât? <br />Nu! <br />Mai jos îți prezentăm câteva articole
+      interesante și lista completă de servicii.
+    </p>
   </div>
 </div>
 
-<div class="article-list">
-  <div *ngFor="let service of services" class="article">
-    <div
-      [style.backgroundImage]="'url(' + service.image800wWebp + ')'"
-      [routerLink]="[pageSlugs.SERVICES, service.slug]"
-    >
-      <h2>{{ service.title }}</h2>
-      <p>{{ service.summary }}</p>
-    </div>
+<div class="home-container">
+  <div class="article-list">
+    <h2>Articole de citit</h2>
+    <div *ngFor="let article of articles | slice: 0:3" class="article">
+      <div
+        [style.backgroundImage]="'url(' + article.image800wWebp + ')'"
+        [routerLink]="[pageSlugs.ARTICLES, article.slug]"
+      >
+        <h3>{{ article.title }}</h3>
+        <p>{{ article.summary }}</p>
+      </div>
 
-    <a [routerLink]="[pageSlugs.SERVICES, service.slug]">Citește mai mult...</a>
+      <a [routerLink]="[pageSlugs.ARTICLES, article.slug]"
+        >Citește mai mult...</a
+      >
+    </div>
+  </div>
+
+  <div class="article-list">
+    <h2>Servicii</h2>
+    <div *ngFor="let service of services | slice: 0:3" class="article">
+      <div
+        [style.backgroundImage]="'url(' + service.image800wWebp + ')'"
+        [routerLink]="[pageSlugs.SERVICES, service.slug]"
+      >
+        <h3>{{ service.title }}</h3>
+        <p>{{ service.summary }}</p>
+      </div>
+
+      <a [routerLink]="[pageSlugs.SERVICES, service.slug]"
+        >Citește mai mult...</a
+      >
+    </div>
+  </div>
+</div>
+
+<div class="message-box-container">
+  <div class="message-box">
+    <p>Cui ne adresăm?</p>
+  </div>
+</div>
+
+<div class="home-container">
+  <!-- Investitori -->
+  <div class="audience-category">
+    <h3>Investitorilor</h3>
+    <p>
+      Partenerul tău de încredere pentru transformarea investițiilor în
+      realități tangibile, durabile și profitabile.
+    </p>
+  </div>
+
+  <!-- Arhitecți -->
+  <div class="audience-category">
+    <h3>Arhitecților</h3>
+    <p>
+      Colaborăm pentru a da viață viziunilor tale artistice, asigurând
+      funcționalitate și conformitate tehnică.
+    </p>
+  </div>
+
+  <!-- Ingineri din Construcții -->
+  <div class="audience-category">
+    <h3>Inginerilor din Construcții</h3>
+    <p>
+      Îmbinăm expertiza și inovația pentru a realiza proiecte eficiente, sigure
+      și durabile în timp.
+    </p>
+  </div>
+
+  <!-- Beneficiari Persoane Fizice -->
+  <div class="audience-category">
+    <h3>Beneficiari Persoane Fizice</h3>
+    <p>
+      Visezi la casa perfectă sau plănuiești să cumperi un teren pentru a-ți
+      construi viitorul? Ne dedicăm să transformăm visele tale în realitate,
+      oferindu-ți sprijin specializat în fiecare etapă a procesului.
+    </p>
+  </div>
+
+  <!-- Constructori -->
+  <div class="audience-category">
+    <h3>Constructorilor</h3>
+    <p>
+      Alături de tine pentru a asigura realizarea de construcții de calitate,
+      eficiente și sustenabile, prin servicii adaptate și soluții inovative în
+      domeniul ingineriei și arhitecturii.
+    </p>
+  </div>
+
+  <!-- Companii Mari pentru Outsourcing -->
+  <div class="audience-category">
+    <h3>Companiilor Mari pentru Outsourcing</h3>
+    <p>
+      Oferim servicii personalizate pentru a facilita externalizarea eficientă a
+      proiectelor de construcție și inginerie, garantând calitate, siguranță și
+      eficiență optimizată.
+    </p>
+  </div>
+</div>
+
+<div class="message-box-container">
+  <div class="message-box">
+    <p>Ce experiența avem?</p>
+  </div>
+</div>
+
+<div class="home-container-2">
+  <h3>
+    Peste 14 Ani de Experiență în Construcții si un portofoliu de peste 2000 de
+    proiecte
+  </h3>
+
+  <p>
+    La <strong>{{ companyData.CompanyName }}</strong> ne mândrim cu un
+    portofoliu impresionant de peste
+    <strong>2000 de proiecte finalizate </strong> , reflectând experiența și
+    dedicarea echipei noastre în construcții civile, infrastructură industrială,
+    telecomunicații și transport.
+  </p>
+</div>
+
+<div class="home-container-2">
+  <div class="services-rating">
+    <h3>Servicii ⭐⭐⭐⭐⭐</h3>
+    <p>
+      Oferim servicii de construcții de înaltă calitate, cu o atenție deosebită
+      la detalii și o dedicare totală față de satisfacția clientului.
+    </p>
+  </div>
+</div>
+
+<div class="message-box-container">
+  <div class="message-box">
+    <p>FAQ - intrebări frecvente</p>
+  </div>
+</div>
+
+<div class="faq-container">
+  <div>
+    <h3><span class="arrow">▼</span>Cum pot să îmi încep proiectul cu voi?</h3>
+    <p>
+      Pentru a începe, ne puteți contacta direct prin WhatsApp, email sau
+      telefon. Un membru al echipei noastre vă va răspunde în cel mai scurt timp
+      posibil pentru a discuta detaliile proiectului dumneavoastră.
+    </p>
+    <p>
+      <span>
+        <a
+          [href]="'https://wa.me/' + phoneNumber + '?text=' + wppMessage"
+          class="cta"
+          title="WhatsApp"
+          target="_blank"
+        >
+          <button>WhatsApp</button>
+        </a>
+      </span>
+    </p>
+  </div>
+  <div>
+    <h3>
+      <span class="arrow">▼</span>Ce tipuri de proiecte realizeză compania
+      dumneavoastră?
+    </h3>
+    <p>
+      Realizăm o varietate largă de proiecte, inclusiv construcții civile,
+      blocuri, școli, hale industriale, turnuri de telecomunicații.
+    </p>
+  </div>
+  <div>
+    <h3><span class="arrow">▼</span>Care este programul de lucru?</h3>
+    <p>De Luni până Vineri între orele 9:00-18:00.</p>
   </div>
 </div>

@@ -1,6 +1,6 @@
 export enum CompanyData {
   SoftwareName = 'BuildCad',
-  CompanyName = 'S.C. BUILD TECH ENTERPRISE S.R.L.',
+  CompanyName = 'BUILD TECH ENTERPRISE S.R.L.',
   UniqueRegistrationCode = 'RO 	36290908',
   MatriculationNumber = 'J40/9300/2016',
   CompanyAddress = 'Bld. Tineretului, nr. 53, Sector 4, Bucuresti, Romania',
@@ -21,6 +21,7 @@ export enum CompanyData {
   LinkedIn = 'https://www.linkedin.com/company/numeCompanie/',
   WhatsAppMessage = 'Buna ziua! Doresc sa va adresez urmatoarea intrebare. ',
   WhatsAppPhoneNumber = '+40724645018',
+  FoundingYear = '2016',
 }
 
 // export enum CompanyData {

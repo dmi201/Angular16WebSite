@@ -6,6 +6,7 @@ import {
   Service,
 } from '../modules/home/components/home.component';
 import { CompanyData } from '../enums/company-data';
+import { PageSlugs } from '../enums/page-slugs';
 
 @Injectable({
   providedIn: 'root',
@@ -184,7 +185,7 @@ export class ArticleService {
       slug: '',
     },
     {
-      title: `Când este Necessară Expertiza Tehnică in Constructii? `,
+      title: `Când este Necesară Expertiza Tehnică in Constructii? `,
       content: `Conform reglementărilor
       legale, majoritatea lucrărilor efectuate pe clădiri existente necesită un
       raport de expertiză tehnică, care trebuie elaborat de un expert acreditat.
@@ -241,7 +242,7 @@ export class ArticleService {
       content: ` Dacă doriți să
       îndepărtați sau să adăugați pereți într-un apartament, veți avea nevoie de
       o evaluare tehnică și de un plan de acțiune. `,
-      images400wWebp: [],
+      images400wWebp: ['../../assets/reconfigurare-apartament-400px.webp'],
       slug: '',
     },
     {
@@ -250,7 +251,7 @@ export class ArticleService {
       content: `Fie că e vorba de adăugarea unui etaj sau de extinderea unei
       case, este vital să obțineți un raport de expertiză tehnică care să
       confirme integritatea structurii. `,
-      images400wWebp: [],
+      images400wWebp: ['../../assets/mansardare-casa-400px.webp'],
       slug: '',
     },
     {
@@ -261,7 +262,7 @@ export class ArticleService {
       va evalua riscul asupra fundației și a stabilității clădirilor adiacente.
       Pași pentru Efectuarea unei Expertize Tehnice Contactarea unui Arhitect:
       Este primul pas în procesul de obținere a autorizațiilor necesare.`,
-      images400wWebp: [],
+      images400wWebp: ['../../assets/alipire-la-calcan-400px.webp'],
       slug: '',
     },
     {
@@ -279,17 +280,6 @@ export class ArticleService {
       Inspectoratului Teritorial în Construcții sau al altor organe de control.
       Obținerea Autorizației de Construire: Este ultimul pas și cel care permite
       începerea lucrărilor. `,
-      images400wWebp: [],
-      slug: '',
-    },
-    {
-      title: `Construcții Apropiate de Clădiri
-      Existente`,
-      content: `În cazul construirii în imediata vecinătate a unei clădiri deja
-      existente, este obligatoriu să se efectueze o expertiză tehnică. Aceasta
-      va evalua riscul asupra fundației și a stabilității clădirilor adiacente.
-      Pași pentru Efectuarea unei Expertize Tehnice Contactarea unui Arhitect:
-      Este primul pas în procesul de obținere a autorizațiilor necesare.`,
       images400wWebp: [],
       slug: '',
     },
@@ -382,11 +372,123 @@ export class ArticleService {
       'Expertiza Tehnica Judiciara, Expertiza Tehnica în Constructii, Expert Tehnic,  Expert Tehnic MLPAT, Expert Tehnic A1, A2, Af, A4, B2, B9 sau Is',
   };
 
+  private archBucArtSections: Section[] = [
+    {
+      title: 'De ce să Alegi un Arhitect din București?',
+      content:
+        'Alegerea unui arhitect local din București poate aduce numeroase avantaje, inclusiv cunoașterea specificităților arhitecturale ale regiunii, accesibilitatea pentru întâlniri față în față și o mai bună coordonare a proiectelor. Un arhitect din București va avea o înțelegere profundă a contextului urban și a reglementărilor locale, esențiale pentru succesul oricărui proiect de construcție.',
+      images400wWebp: [],
+      slug: 'de-ce-sa-alegi-un-arhitect-din-bucuresti',
+    },
+    {
+      title: 'Cum să Găsești Cel Mai Bun Arhitect în București?',
+      content:
+        'Pentru a găsi cel mai bun arhitect în București, începe prin a cere recomandări de la prieteni sau colegi, caută online și verifică recenziile, și nu ezita să ceri portofoliul arhitectului pentru a vedea lucrările anterioare. Este important să alegi un profesionist cu experiență și să stabilești o bună comunicare pentru a te asigura că viziunea ta va fi transpusă în realitate.',
+      images400wWebp: [],
+      slug: 'cum-sa-gasesti-cel-mai-bun-arhitect-in-bucuresti',
+    },
+    {
+      title: 'Ce Servicii Oferă un Arhitect în București?',
+      content:
+        'Un arhitect din București poate oferi o gamă variată de servicii, inclusiv proiectarea planurilor arhitecturale, obținerea autorizațiilor de construcție, coordonarea echipei de construcție și supervizarea lucrărilor. De asemenea, un arhitect poate oferi consultanță pentru alegerea celor mai bune materiale și tehnologii, asigurându-se că proiectul tău este nu doar estetic plăcut, dar și funcțional și durabil.',
+      images400wWebp: [],
+      slug: 'ce-servicii-ofera-un-arhitect-in-bucuresti',
+    },
+    {
+      title: 'Tendințe în Arhitectura Bucureșteană',
+      content:
+        'Arhitectura din București este un amestec fascinant de vechi și nou, reflectând istoria bogată și dinamica orașului. În ultimii ani, am observat o tendință către construcții mai sustenabile și spații urbane prietenoase, cu accent pe zone verzi și integrarea naturii în designul urban. Arhitecții bucureșteni sunt tot mai concentrați pe crearea de soluții inovative și eficiente din punct de vedere energetic.',
+      images400wWebp: [],
+      slug: 'tendinte-in-arhitectura-bucuresteana',
+    },
+    {
+      title: 'Proiecte Celebre de Arhitectură în București',
+      content:
+        'Bucureștiul este casa unor clădiri iconice și proiecte arhitecturale de renume. De la Ateneul Român, o capodoperă a arhitecturii neoclasice, până la Casa Poporului, una dintre cele mai mari și mai grele clădiri din lume, arhitectura Bucureștiului spune o poveste fascinantă a evoluției și creativității. Aceste proiecte demonstrează măiestria arhitecților locali și sunt surse de inspirație pentru generațiile viitoare.',
+      images400wWebp: [
+        '../../assets/ateneul-roman-400px.webp',
+        '../../assets/casa-poporului-400px.webp',
+      ],
+      slug: 'proiecte-celebre-de-arhitectura-in-bucuresti',
+    },
+    {
+      title: 'Sfaturi pentru Lucrul cu un Arhitect în București',
+      content:
+        'Colaborarea cu un arhitect este un pas crucial în realizarea visului tău arhitectural. Este important să stabilești așteptările de la bun început, să comunici deschis și să fii pregătit să faci compromisuri acolo unde este necesar. Asigură-te că înțelegi procesul de design, termenii contractuali și toate costurile implicate. Un arhitect bun te va ghida prin întregul proces, asigurându-se că proiectul tău este realizat conform așteptărilor și în limita bugetului stabilit.',
+      images400wWebp: [],
+      slug: 'sfaturi-pentru-lucrul-cu-un-arhitect-in-bucuresti',
+    },
+    {
+      title: 'Beneficiile Colaborării cu un Arhitect Local',
+      content:
+        'Colaborarea cu un arhitect local din București oferă multiple avantaje, inclusiv o mai bună înțelegere a legislației și reglementărilor locale, accesul la rețele locale de furnizori și subcontractori, și o comunicare mai eficientă. Un arhitect local va fi, de asemenea, mai disponibil pentru întâlniri față în față și va avea o mai bună cunoaștere a particularităților culturale și sociale ale zonei, ceea ce poate contribui semnificativ la succesul proiectului.',
+      images400wWebp: [],
+      slug: 'beneficiile-colaborarii-cu-un-arhitect-local',
+    },
+    {
+      title: 'Resurse și Inspiratie pentru Designul Arhitectural',
+      content:
+        'Există numeroase resurse disponibile pentru cei interesați de designul arhitectural în București. De la muzee și expoziții, până la evenimente locale și platforme online, posibilitățile de inspirație și învățare sunt nenumărate. Participarea la evenimente locale de arhitectură și design poate oferi o perspectivă unică asupra trendurilor actuale și a celor mai bune practici din domeniu.',
+      images400wWebp: [],
+      slug: 'resurse-si-inspiratie-pentru-designul-arhitectural',
+    },
+    {
+      title: 'Provocările Arhitecturii în București',
+      content:
+        'Deși există multe oportunități în domeniul arhitecturii în București, există și provocări semnificative. Restrângerile spațiale, reglementările stricte și necesitatea de a integra noile construcții într-un context urban dens sunt doar câteva dintre obstacolele cu care se confruntă arhitecții. Abordarea creativă și inovatoare a acestor provocări este esențială pentru a asigura dezvoltarea armonioasă și sustenabilă a orașului.',
+      images400wWebp: [],
+      slug: 'provocarile-arhitecturii-in-bucuresti',
+    },
+    {
+      title:
+        'Cum Să Alegi Materialele Potrivite pentru Proiectul Tău Arhitectural în București',
+      content:
+        'Alegerea materialelor potrivite este crucială pentru succesul oricărui proiect arhitectural. În București, unde condițiile climatice și contextul urban pot fi provocatoare, este important să optezi pentru materiale durabile, eficiente din punct de vedere energetic și estetic plăcute. Discutăm despre cum să navighezi prin diversele opțiuni și să faci alegeri informate care să îmbunătățească durabilitatea și estetica proiectului tău.',
+      images400wWebp: ['../../assets/materiale-constructie-400px.webp'],
+      slug:
+        'cum-sa-alegi-materialele-potrivite-pentru-proiectul-tau-arhitectural-in-bucuresti',
+    },
+    {
+      title:
+        'Integrarea Designului Sustenabil în Proiectele Arhitecturale din București',
+      content:
+        'Sustenabilitatea a devenit un aspect esențial în arhitectura modernă, iar Bucureștiul nu face excepție. Explorăm diferite strategii și practici de design sustenabil pe care arhitecții le pot adopta pentru a crea spații care să minimizeze impactul asupra mediului și să promoveze bunăstarea locuitorilor.',
+      images400wWebp: ['../../assets/design-sustenabil-arhitectura-400px.webp'],
+      slug:
+        'integrarea-designului-sustenabil-in-proiectele-arhitecturale-din-bucuresti',
+    },
+    {
+      title:
+        'Ghidul Complet pentru Obținerea Autorizațiilor de Construcție în București',
+      content:
+        'Navigarea prin procesul de obținere a autorizațiilor de construcție în București poate fi complexă și intimidantă. Acest ghid îți oferă toate informațiile necesare, de la documentele pe care trebuie să le pregătești, până la pașii pe care trebuie să îi urmezi, pentru a-ți asigura că proiectul tău este în conformitate cu toate reglementările locale.',
+      images400wWebp: ['../../assets/autorizatie-de-construire-400px.webp'],
+      slug:
+        'ghidul-complet-pentru-obtinerea-autorizatiilor-de-constructie-in-bucuresti',
+    },
+  ];
+
+  private archBucArt: Article = {
+    id: 5,
+    slug: 'arhitect-bucuresti',
+    title: 'Arhitect Bucuresti',
+    summary: 'Ghidul Complet al Serviciilor de Arhitectură în București',
+    sections: this.archBucArtSections,
+    image800wWebp: '../../assets/arhitect-800px.webp',
+    datePublished: '30/10/2023',
+    dateCreated: '30/10/2023',
+    dateModified: '30/10/2023',
+    category: 'Articole din constructii',
+    estimatedReadTime: '7 minute',
+    keywords: 'arhitect, arhitect bucuresti, arhitect ilfov',
+  };
+
   private articles: Article[] = [
     this.dtacPthDeArt,
     this.verifArt,
     this.expArt,
     this.expJudvsTehArt,
+    this.archBucArt,
   ];
 
   private services: Service[] = [
@@ -434,6 +536,8 @@ export class ArticleService {
         'dezvoltator imobiliar',
         'investitor',
       ],
+      keywords:
+        'proiectare constructii civile, proiectant constructii, proiectant, constructii civile, proiect cadre din beton armat, proiect structuri metalice, proiectant blocuri, proiect case, proiect vile ',
     },
     {
       id: 2,
@@ -459,6 +563,8 @@ export class ArticleService {
       priceCurrency: 'Euro',
       areaServed: ['Bucuresti', 'Ilfov', 'Romania', 'Europa'],
       serviceAudience: ['arhitect', 'structurist', 'investitor'],
+      keywords:
+        'proiectare constructii industriale, proiect hala beton, proiect hala metal',
     },
     {
       id: 3,
@@ -491,6 +597,8 @@ export class ArticleService {
         'companii telecom',
         'companii telecomunicatii',
       ],
+      keywords:
+        'proiectare turnuri telecomunicatii, proiectant telecom, turnuri de telecomunicatii',
     },
   ];
 
@@ -512,6 +620,14 @@ export class ArticleService {
     return this.articles.find((article) => article.slug === slug)!;
   }
 
+  getArticlesKeywordsString() {
+    return this.articles.map((article) => article.keywords).join(', ');
+  }
+
+  getServicesKeywordsString() {
+    return this.services.map((service) => service.keywords).join(', ');
+  }
+
   getServices() {
     return this.services;
   }
@@ -528,29 +644,6 @@ export class ArticleService {
     return this.services.find((service) => service.slug === slug)!;
   }
 
-  // returnSchemaFromArticle(article: Article) {
-  //   let schema = `{
-  //     "@context": "https://schema.org",
-  //     "@type": "TechArticle",
-  //     "headline": "${article.title}",
-  //     "alternativeHeadline": "${article.summary}",
-  //     "image": "${article.image800wWebp}",
-  //     "author": "${CompanyData.CompanyOwner}",
-  //     "editor": "${CompanyData.CompanyOwner}",
-  //     "genre": "${article.category}",
-  //     "keywords": "${article.keywords}",
-  //     "wordcount": "${article.content.split(' ').length}",
-  //     "publisher": "${CompanyData.CompanyName}",
-  //     "url": "${CompanyData.CompanyWebsite}/articole/${article.slug}",
-  //     "datePublished": "${article.datePublished}",
-  //     "dateCreated": "${article.datePublished}",
-  //     "dateModified": "${article.datePublished}",
-  //     "description": "${article.summary}",
-  //     "articleBody": ${JSON.stringify(article.content)}
-  //   }`;
-
-  //   return JSON.parse(schema); // This will parse the JSON string and return a JSON object
-  // }
   returnSchemaFromArticle(article: Article) {
     const articleBody = article.sections
       .map((section) => section.content)
@@ -568,7 +661,7 @@ export class ArticleService {
       keywords: article.keywords,
       wordcount: wordCount,
       publisher: CompanyData.CompanyName,
-      url: `${CompanyData.CompanyWebsite}/articole/${article.slug}`,
+      url: `${CompanyData.CompanyWebsite}${PageSlugs.ARTICLES}/${article.slug}`,
       datePublished: article.datePublished,
       dateCreated: article.datePublished,
       dateModified: article.datePublished,
