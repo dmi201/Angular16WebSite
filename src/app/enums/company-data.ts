@@ -9,7 +9,7 @@ export enum CompanyData {
   CompanyWebsite = 'buildtechent.ro',
   CompanyOwner = 'Dinu Mihail Iulian',
   CompanyBankAccount = 'INGB 00000 mock account',
-  LastUpdate = '14.06.2023',
+  LastUpdate = '18.01.2024',
   CurrentVersion = 'V.1.0.',
   ContactType = 'Servicii proiectare constructii',
   AddressLocality = 'Bucuresti',

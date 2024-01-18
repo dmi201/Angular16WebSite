@@ -140,7 +140,7 @@ export class ArticleService {
       slug: '',
     },
     {
-      title: `Unde Găsiți un Verificator de Proiecte Atestat MLPAT in 2023`,
+      title: `Unde Găsiți un Verificator de Proiecte Atestat MLPAT in 2024`,
       content: `Lista actualizată a verificatorilor de proiecte atestați, precum și cei pentru care practica a fost suspendată, este disponibilă pe site-ul Ministerului Lucrărilor Publice. Structurată pe județe și domenii de atestare, lista este un instrument util pentru a identifica profesioniștii calificați pentru evaluarea proiectelor de construcție.`,
       images400wWebp: [],
       slug: '',
@@ -148,7 +148,7 @@ export class ArticleService {
     {
       title: ``,
       content: `O găsiți accesând link-ul: 
-      <a href="https://www.mdlpa.ro/pages/registrepublice" target="_blank">
+      <strong><a href="https://www.mdlpa.ro/pages/registrepublice" target="_blank">
           Verificatori de Proiecte Atestați
       </a>`,
       images400wWebp: [],
@@ -159,14 +159,14 @@ export class ArticleService {
   private verifArt: Article = {
     id: 2,
     slug: 'verificator-proiecte-atestat-mlpat',
-    title: 'Ce rol are un Verificator de Proiecte in 2023?',
+    title: 'Ce rol are un Verificator de Proiecte in 2024?',
     summary:
       'Descoperă rolul și importanța unui verificator de proiecte atestat în domeniul construcțiilor, responsabilitățile și domeniile în care intervine.',
     sections: this.verifArtSections,
     image800wWebp: '../../assets/verificator-proiecte-800px.webp',
     datePublished: '21/09/2023',
     dateCreated: '21/09/2023',
-    dateModified: '13/10/2023',
+    dateModified: '18/01/2024',
     category: 'Articole din constructii',
     estimatedReadTime: '9 minute',
     keywords:
@@ -199,7 +199,7 @@ export class ArticleService {
     {
       title: `Ce inseamna MLPAT?`,
       content: `MLPAT este acronimul de la fostul Minister al Lucrărilor Publice și Achizițiilor, actualul MDLPA (Ministerul Dezvoltării, Lucrărilor Publice și Administrației). 
-      Acesta este site-ul oficial: <a href="https://www.mdlpa.ro/" target="_blank">https://www.mdlpa.ro/</a>`,
+      Acesta este site-ul oficial: <strong><a href="https://www.mdlpa.ro/" target="_blank">https://www.mdlpa.ro/</a>`,
       images400wWebp: [],
       slug: '',
     },
@@ -227,7 +227,7 @@ export class ArticleService {
     {
       title: `Link-ul cu toate competențele experților tehnici  în domenii de construcții/specialități`,
       content: `Mai jos gasiti un link cu toate competențele experților tehnici  în domenii de construcții/specialități de instalații/activități specifice în funcție de domeniile de atestare tehnico-profesională și cerințele fundamentale prevăzute de Legea nr.10/1995
-<a href="https://www.mdlpa.ro/pages/competenteexperti" target="_blank">https://www.mdlpa.ro/pages/competenteexperti</a>`,
+      <strong><a href="https://www.mdlpa.ro/pages/competenteexperti" target="_blank">https://www.mdlpa.ro/pages/competenteexperti</a>`,
       images400wWebp: [],
       slug: '',
     },
@@ -374,23 +374,18 @@ export class ArticleService {
 
   private archBucArtSections: Section[] = [
     {
-      title: 'De ce să Alegi un Arhitect din București?',
+      title:
+        'De ce să Alegi un Arhitect din București? Cum găsesc un Arhitect în București?',
       content:
         'Alegerea unui arhitect local din București poate aduce numeroase avantaje, inclusiv cunoașterea specificităților arhitecturale ale regiunii, accesibilitatea pentru întâlniri față în față și o mai bună coordonare a proiectelor. Un arhitect din București va avea o înțelegere profundă a contextului urban și a reglementărilor locale, esențiale pentru succesul oricărui proiect de construcție.',
       images400wWebp: [],
       slug: 'de-ce-sa-alegi-un-arhitect-din-bucuresti',
     },
-    {
-      title: 'Cum să Găsești Cel Mai Bun Arhitect în București?',
-      content:
-        'Pentru a găsi cel mai bun arhitect în București, începe prin a cere recomandări de la prieteni sau colegi, caută online și verifică recenziile, și nu ezita să ceri portofoliul arhitectului pentru a vedea lucrările anterioare. Este important să alegi un profesionist cu experiență și să stabilești o bună comunicare pentru a te asigura că viziunea ta va fi transpusă în realitate.',
-      images400wWebp: [],
-      slug: 'cum-sa-gasesti-cel-mai-bun-arhitect-in-bucuresti',
-    },
+
     {
       title: 'Ce Servicii Oferă un Arhitect în București?',
       content:
-        'Un arhitect din București poate oferi o gamă variată de servicii, inclusiv proiectarea planurilor arhitecturale, obținerea autorizațiilor de construcție, coordonarea echipei de construcție și supervizarea lucrărilor. De asemenea, un arhitect poate oferi consultanță pentru alegerea celor mai bune materiale și tehnologii, asigurându-se că proiectul tău este nu doar estetic plăcut, dar și funcțional și durabil.',
+        'Un arhitect din București poate oferi o gamă variată de servicii, inclusiv proiectarea planurilor arhitecturale, obținerea autorizațiilor de construcție, coordonarea echipei de construcție și supervizarea lucrărilor. De asemenea, un arhitect poate oferi consultanță pentru alegerea celor mai bune materiale și tehnologii, asigurându-se că proiectul tău este nu doar estetic plăcut, dar și funcțional și durabil. Nu lucrați cu un arhitect fără să aveți un contract. Contractul este o formă juridică prin care sunt reprezentate în mod echilibrat interesele tuturor părților și care prevede toate situațiile neprevăzute ce pot apărea în mod obiectiv în colaborarea dintre părți. Munca unui arhitect trebuie onorată în mod just, ceea ce oferă garanția primirii unui proiect de calitate.',
       images400wWebp: [],
       slug: 'ce-servicii-ofera-un-arhitect-in-bucuresti',
     },
@@ -445,8 +440,7 @@ export class ArticleService {
       content:
         'Alegerea materialelor potrivite este crucială pentru succesul oricărui proiect arhitectural. În București, unde condițiile climatice și contextul urban pot fi provocatoare, este important să optezi pentru materiale durabile, eficiente din punct de vedere energetic și estetic plăcute. Discutăm despre cum să navighezi prin diversele opțiuni și să faci alegeri informate care să îmbunătățească durabilitatea și estetica proiectului tău.',
       images400wWebp: ['../../assets/materiale-constructie-400px.webp'],
-      slug:
-        'cum-sa-alegi-materialele-potrivite-pentru-proiectul-tau-arhitectural-in-bucuresti',
+      slug: 'cum-sa-alegi-materialele-potrivite-pentru-proiectul-tau-arhitectural-in-bucuresti',
     },
     {
       title:
@@ -454,8 +448,7 @@ export class ArticleService {
       content:
         'Sustenabilitatea a devenit un aspect esențial în arhitectura modernă, iar Bucureștiul nu face excepție. Explorăm diferite strategii și practici de design sustenabil pe care arhitecții le pot adopta pentru a crea spații care să minimizeze impactul asupra mediului și să promoveze bunăstarea locuitorilor.',
       images400wWebp: ['../../assets/design-sustenabil-arhitectura-400px.webp'],
-      slug:
-        'integrarea-designului-sustenabil-in-proiectele-arhitecturale-din-bucuresti',
+      slug: 'integrarea-designului-sustenabil-in-proiectele-arhitecturale-din-bucuresti',
     },
     {
       title:
@@ -463,24 +456,45 @@ export class ArticleService {
       content:
         'Navigarea prin procesul de obținere a autorizațiilor de construcție în București poate fi complexă și intimidantă. Acest ghid îți oferă toate informațiile necesare, de la documentele pe care trebuie să le pregătești, până la pașii pe care trebuie să îi urmezi, pentru a-ți asigura că proiectul tău este în conformitate cu toate reglementările locale.',
       images400wWebp: ['../../assets/autorizatie-de-construire-400px.webp'],
-      slug:
-        'ghidul-complet-pentru-obtinerea-autorizatiilor-de-constructie-in-bucuresti',
+      slug: 'ghidul-complet-pentru-obtinerea-autorizatiilor-de-constructie-in-bucuresti',
+    },
+    {
+      title: 'Care este diferența dintre un arhitect și un proiectant?',
+      content:
+        '<strong>Arhitect: </strong> Un arhitect este un profesionist licențiat care are o educație specializată în domeniul proiectării arhitecturale. Arhitecții sunt responsabili pentru aspectul estetic și funcțional al unei clădiri, inclusiv designul interior și exterior. Ei trebuie să țină cont de multe aspecte, cum ar fi estetica, siguranța structurii, sustenabilitatea și eficiența energetică. În România, pentru a practica ca arhitect, este necesară absolvirea unei facultăți de arhitectură și obținerea dreptului de semnătură printr-o perioadă de stagiatură și un examen de admitere în Ordinul Arhitecților din România( OAR). </br> <strong>Proiectant: </strong> Termenul de proiectant este mai general și poate include o varietate de specializări în domeniul ingineriei (cum ar fi inginerie civilă, inginerie mecanică, inginerie electrică etc.) și se referă la persoane care sunt responsabile pentru proiectarea detaliilor tehnice ale unei construcții. Proiectanții se concentrează pe aspectele tehnice și funcționale, asigurându-se că structura este sigură și conformă cu normele și reglementările tehnice. Pentru a deveni proiectant, este necesară de obicei o formare tehnică specifică și, în funcție de domeniu, licențiere sau certificare profesională.',
+      images400wWebp: [],
+      slug: 'ghidul-complet-pentru-obtinerea-autorizatiilor-de-constructie-in-bucuresti',
+    },
+    {
+      title: 'Cum să Găsești Cel Mai Bun Arhitect în București in 2024? ',
+      content:
+        'Pentru a găsi cel mai bun arhitect în București, începe prin a cere recomandări de la prieteni sau colegi, caută online și verifică recenziile, și nu ezita să ceri portofoliul arhitectului pentru a vedea lucrările anterioare. Este important să alegi un profesionist cu experiență și să stabilești o bună comunicare pentru a te asigura că viziunea ta va fi transpusă în realitate. În caz că nu ai găsit, intră pe site-ul OAR și caută acolo: <a href="https://www.sioar.ro/membersearch" target="_blank">https://www.sioar.ro/membersearch</a>',
+      images400wWebp: [],
+      slug: 'cum-sa-gasesti-cel-mai-bun-arhitect-in-bucuresti',
+    },
+    {
+      title: `Link-ul cu toții arhitecții din București și din toată țară înscriși în OAR( Ordinul Arhitecților din România).`,
+      content: `Mai jos gășiți un link cu toți arhitecții acreditați OAR din București si din toată țară. Selectează Filiala, de exemplu Bucuresti și apasă butonul Roșu "CAUTA". Fă   click pe Detalii Membru și vei găsii toate datele de contact ale respectivului Arhitect.
+        <strong><a href="https://www.sioar.ro/membersearch" target="_blank">https://www.sioar.ro/membersearch</a>`,
+      images400wWebp: [],
+      slug: '',
     },
   ];
 
   private archBucArt: Article = {
     id: 5,
     slug: 'arhitect-bucuresti',
-    title: 'Arhitect Bucuresti',
+    title: 'Tot ce trebuie sa știi despre Arhitect București in 2024',
     summary: 'Ghidul Complet al Serviciilor de Arhitectură în București',
     sections: this.archBucArtSections,
     image800wWebp: '../../assets/arhitect-800px.webp',
     datePublished: '30/10/2023',
     dateCreated: '30/10/2023',
-    dateModified: '30/10/2023',
+    dateModified: '18/01/2024',
     category: 'Articole din constructii',
-    estimatedReadTime: '7 minute',
-    keywords: 'arhitect, arhitect bucuresti, arhitect ilfov',
+    estimatedReadTime: '10 minute',
+    keywords:
+      'arhitect, arhitect bucuresti, arhitect ilfov, cauta arhitect, lista arhitecti bucuresti, OAR, Ordinul Arhitectilor din Romania',
   };
 
   private articles: Article[] = [
